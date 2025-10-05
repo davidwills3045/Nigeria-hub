@@ -12,7 +12,7 @@ const Platforms = () => {
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-8">
           <a
-            href="https://trello.com"
+            href="https://trello.com/b/f8i39h6l/radassist-ai-nigeria-hub"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 bg-[#0079bf] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
@@ -21,13 +21,13 @@ const Platforms = () => {
             View on Trello
           </a>
           <a
-            href="https://forms.office.com"
+            href="https://docs.google.com/forms/d/1vVMFrzbw_j1cfWsoRAGu09yT6qheJ2zVStiHhnRk8Pk/edit"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 bg-[#737373] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
           >
             <FaFileAlt className="text-xl" />
-            Apply via Microsoft Forms
+            Submit Task via Microsoft Forms
           </a>
         </div>
       </div>

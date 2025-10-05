@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section 
     id='home'
-      className="relative h-screen flex items-center bg-cover bg-center bg-no-repeat"
+      className="relative pt-20 md:pt-24 h-screen flex items-center bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url('https://images.unsplash.com/photo-1541336032412-2048a678540d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80')`
       }}

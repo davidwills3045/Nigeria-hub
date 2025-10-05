@@ -18,12 +18,31 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    "Home",
-    "About Us",
-    "Opportunities",
-    "Resources",
-    "Contact",
+    {name: "Home",href: "#home"},
+    {name: "About Us",href: "#about"},
+    {name: "Opportunities",href: "#opportunities"},
+    {name: "Resources",href: "#resources"},
+    {name: "Contact",href: "#contact"},
   ];
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const headerHeight = 80;
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+    //   setIsMenuOpen(false);
+    }
+  };
+
   return (
     <footer id="contact" className="bg-dark text-secondary pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -52,13 +71,14 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-accent mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link}>
+              {quickLinks.map((item) => (
+                <li key={item.name}>
                   <a
-                    href="#"
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     className="text-gray-400 hover:text-accent transition-colors duration-300"
                   >
-                    {link}
+                    {item.name}
                   </a>
                 </li>
               ))}
