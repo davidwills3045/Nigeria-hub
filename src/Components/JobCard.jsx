@@ -181,13 +181,21 @@ const JobCard = ({ job }) => {
 
         {/* Action Buttons */}
         {job.href && (
-          <div className="flex gap-3 mt-6 pt-4 border-t border-gray-100">
-            {/* <button className="flex-1 bg-gray-100 text-gray-800 py-3 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-300 text-sm">
-            View Details
-          </button> */}
+          <div className="flex flex-row-reverse gap-3 mt-6 pt-4 border-t border-gray-100">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/1vVMFrzbw_j1cfWsoRAGu09yT6qheJ2zVStiHhnRk8Pk/edit",
+                  "_blank"
+                )
+              }
+              className="flex-1 bg-accent text-dark py-3 px-4 rounded-lg font-medium hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              Submit Task
+            </button>
             <button
               onClick={() => window.open(job.href, "_blank")}
-              className="flex-1 bg-primary text-secondary py-3 px-4 rounded-lg font-medium hover:bg-[#006e42] transition-colors duration-300 text-sm"
+              className="flex-1 bg-primary text-secondary py-3 px-4 rounded-lg font-medium hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               Apply Now
             </button>
